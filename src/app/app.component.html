@@ -1,0 +1,103 @@
+<!-- 
+ <div>Acc</div> 
+<mat-toolbar>
+  Responsive
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav class="mat-elevation-z8">
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      Main content
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+<!-- <mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+
+
+   <span>
+      <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+    </span>
+
+</mat-toolbar> -->
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+    />
+
+    <button mat-button class="menu-button">
+      <mat-icon>dashboard</mat-icon>
+      <span>Tableau de bord</span>
+    </button>
+
+   
+
+    <button mat-button class="menu-button">
+      <mat-icon>business</mat-icon>
+      <span>Regions</span>
+    </button>
+
+    <button mat-button class="menu-button">
+      <mat-icon>terrain</mat-icon>
+      <span>Pays</span>
+    </button>
+    
+    
+    <button mat-button class="menu-button">
+      <mat-icon>account_circle</mat-icon>
+      <span>Compte</span>
+    </button>
+
+    <button mat-button class="menu-button dessous">
+      <mat-icon>power_settings_new</mat-icon>
+      <span>Déconnexion</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- <div class="nav mat-elevation-z8">
+    <button class="decote"
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  </div> -->
+
+  <mat-toolbar class="mat-elevation-z8">
+    <button
+      mat-icon-button
+      *ngIf="sidenav.mode === 'over'"
+      (click)="sidenav.toggle()"
+    >
+      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+    </button>
+    
+  </mat-toolbar>
+    <div class="content ">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
