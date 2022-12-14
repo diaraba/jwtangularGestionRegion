@@ -12,6 +12,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule} from '@angular/material/card';
 import { MatGridListModule} from '@angular/material/grid-list';
 import { AccueilComponent } from './accueil/accueil.component';
+import { RegiondetailsComponent } from './regiondetails/regiondetails.component';
 
 
 
@@ -20,7 +21,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AccueilComponent
+    AccueilComponent,
+    RegiondetailsComponent
   ],
   imports: [
     BrowserModule,

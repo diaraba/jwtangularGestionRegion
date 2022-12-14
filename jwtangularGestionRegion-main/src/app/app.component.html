@@ -51,12 +51,12 @@
     
   </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8 py-4">
     <img
       class="avatar mat-elevation-z8"
-      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+      src="../assets/image/Capture d'écran_20221212_152228 1.png"
     />
-
+<div class="side">
     <button mat-button class="menu-button">
       <mat-icon>dashboard</mat-icon>
       <span routerLink="home">Tableau de bord</span>
@@ -79,11 +79,12 @@
       <mat-icon>account_circle</mat-icon>
       <span>Compte</span>
     </button>
-
-    <button mat-button class="menu-button dessous">
+   <br>
+    <button mat-button class="menu-button dessous ">
       <mat-icon>power_settings_new</mat-icon>
       <span>Déconnexion</span>
     </button>
+  </div>
   </mat-sidenav>
 
   <mat-sidenav-content>

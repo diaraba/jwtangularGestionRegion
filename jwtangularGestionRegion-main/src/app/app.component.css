@@ -11,6 +11,12 @@ mat-toolbar {
     
 
 }
+.dessous{
+    position: relative;
+    top: 30px;
+    background-color: #F8325E;
+    color: white;   
+}
 mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color.ng-star-inserted {
     color: black;
 }
@@ -60,18 +66,21 @@ mat-sidenav {
 
 
 .avatar {
-    margin-top: 16px;
+    margin-top: 1px;
     width: 100px;
-    height: 100px;
+    height: 80px;
     border-radius: 50%;
+}
+.side{
+    margin-top: 40px;
 }
 
 button{
     border:  1px;
     border-radius: 10px;
     background-color:#DDF8D7;
-    margin-top: 10px;
-    height: 45px;
+    margin-top: 20px;
+    height: 40px;
 
 }
 
