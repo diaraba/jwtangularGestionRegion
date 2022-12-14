@@ -38,7 +38,18 @@
     </span>
 
 </mat-toolbar> -->
-
+  <mat-toolbar class="mat-elevation-z8">
+    <p class="text1">MaliTourism</p>
+    <button
+      mat-icon-button
+      *ngIf="sidenav.mode === 'over'"
+      (click)="sidenav.toggle()"
+    >
+      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+    </button>
+    
+  </mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
     <img
@@ -48,7 +59,7 @@
 
     <button mat-button class="menu-button">
       <mat-icon>dashboard</mat-icon>
-      <span>Tableau de bord</span>
+      <span routerLink="home">Tableau de bord</span>
     </button>
 
    
@@ -74,6 +85,7 @@
       <span>Déconnexion</span>
     </button>
   </mat-sidenav>
+
   <mat-sidenav-content>
     <!-- <div class="nav mat-elevation-z8">
     <button class="decote"
@@ -85,17 +97,6 @@
   </button>
   </div> -->
 
-  <mat-toolbar class="mat-elevation-z8">
-    <button
-      mat-icon-button
-      *ngIf="sidenav.mode === 'over'"
-      (click)="sidenav.toggle()"
-    >
-      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
-      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
-    </button>
-    
-  </mat-toolbar>
     <div class="content ">
       <router-outlet></router-outlet>
     </div>

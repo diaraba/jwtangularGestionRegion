@@ -1,9 +1,24 @@
 mat-toolbar {
     /* background: #fff; */
-    color: white;
-    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   z-index: 20;
+    color:#DDF8D7
+    /* margin-top: 30px;
+    position: fixed; */
+    
+    
 
 }
+mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color.ng-star-inserted {
+    color: black;
+}
+
+.text1{
+    color: #FFD885;
+}
+
 mat-sidenav-container{
     margin-bottom: 120%;
 }
@@ -27,7 +42,7 @@ mat-sidenav-content nav{
 .nav.mat-elevation-z8 {
     margin-top: 69px;
     margin-left: 17px;
-    width: 98%;
+    width: 80%;
     position: fixed;
     border-radius: 10px;
 }
