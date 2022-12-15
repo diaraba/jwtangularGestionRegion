@@ -13,6 +13,7 @@ import { MatCardModule} from '@angular/material/card';
 import { MatGridListModule} from '@angular/material/grid-list';
 import { AccueilComponent } from './accueil/accueil.component';
 import { RegiondetailsComponent } from './regiondetails/regiondetails.component';
+import { PaysComponent } from './pays/pays.component';
 
 
 
@@ -22,7 +23,8 @@ import { RegiondetailsComponent } from './regiondetails/regiondetails.component'
   declarations: [
     AppComponent,
     AccueilComponent,
-    RegiondetailsComponent
+    RegiondetailsComponent,
+    PaysComponent
   ],
   imports: [
     BrowserModule,

@@ -50,7 +50,7 @@
     display: block;
     position: relative;
     left: 0;
-    top: 20px;
+    top:-1px;
     width: 100%;
     height: 220px;
 
@@ -72,7 +72,7 @@
     display: block;
     position: relative;
     left: 0;
-    top: -10px;
+    top: -20px;
     width: 100%;
     height: 85px;
     z-index: 0;
@@ -98,7 +98,8 @@
    
   }
   .large{
-     width:500px
+     width:500px;
+     height:270px;
   }
 
   .text{
@@ -129,7 +130,7 @@
       left: 0;
       display: flex;
       margin-top: 60px;
-      top: 70px;
+      top: 210px;
       justify-content: space-between;
     }
     .populationCarte{
@@ -176,14 +177,19 @@
   th{
     background-color: #DDF8D7;
     border: none;
+    font-size: 1.5rem!important;
+  }
+  tr td{
+    border-bottom: black;
+    font-size: 1rem!important;
   }
 
  
   .parent {
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 10px;
+    width: 290px;
+    height: 240px;
+    margin: 10px;top: -15px;
 }
 .child1 {
     position: absolute;
@@ -191,11 +197,77 @@
     height: 100%;
     top: 0;
     left: 0;
-    opacity: 0.7;
-    background: red;
+    /* opacity: 0.7; */
+    background: #FFD885;
+    border-radius: 10px;
 }
 .child2 {
     z-index: 1;
     margin: 30px;
-    background: green;
+    width: 270px;
+    height: 220px;
+    margin-top: -1px;
+    margin-left: 20px;
+    border-radius: 0;
+    background: #F8FFF8;
+}
+
+.child2 p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.palette{
+  position: relative;
+  left: 63%;  
+}
+
+.palette1{
+  display: flex;
+  justify-content: space-evenly;
+}
+span.action {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 45px;
+  position: relative;
+  left: -108px;
+}
+.commentaire{
+  position: relative;
+  top: 300px;
+}
+.commentaireContent{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -10px;
+}
+mat-card.mat-card.mat-focus-indicator.card2 {
+  width: 1000px;
+  height: 90px;
+}
+.textcom{
+  width: fit-content;
+  font-size: 1rem;
+  color: black;
+}
+.textcom1{
+  font-size: 1.5rem;
+  color: black;
+}
+.cminput{
+  position: relative;
+  left: 100 px;
+  top: -100px;
+}
+.input-group {
+  position: relative;
+  left: 8px;
+  top: 40px;
+}
+.col-md-6.cmcontent {
+  position: relative;
+  top: 57px;
+  left: -8px;
 }

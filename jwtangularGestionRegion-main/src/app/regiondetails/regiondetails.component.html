@@ -7,6 +7,15 @@
 
                       <mat-card class="card large">
                         <mat-card-title class="text text-white">Bienvenu sur MaliTourism</mat-card-title>
+                       <span class="action">
+                        
+                        <button mat-button class="menu-button">
+                          <mat-icon>update</mat-icon>
+                        </button>
+                        <button mat-button class="menu-button">
+                          <mat-icon style="color: #F8325E;">delete</mat-icon>
+                        </button>
+                        </span>
                       </mat-card>                        
                       <!-- <p class="text">Bienvenu sur MaliTourism</p> -->
                 </div>
@@ -36,50 +45,95 @@
         </div>
 
        <div  class=" col-md-12 bg paysCarte">
-           <div class="row">
-               <div class="col-md-12">
-                    <div class="col-md-6">
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th  class="gauche" scope="col">Année</th>
-                                <th class="droite" scope="col">Population</th>
-                              </tr>
-                            </thead>
+           <div class="row palette1">
+               <div class="col-md-6 ">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th  class="gauche" scope="col">Année</th>
+                      <th class="droite" scope="col">Population</th>
+                    </tr>
+                  </thead>
 
-                            <tbody>
+                  <tbody>
 
-                              <tr>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
+                    <tr>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
 
-                              <tr>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
+                    <tr>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
 
-                              <tr>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                           
-                            </tbody>
-                          </table>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="parent">
-                            <div class="child1"></div>
-                            <div class="child1 child2"></div>
-
-                        </div>
-                    </div>
+                    <tr>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                 
+                  </tbody>
+                </table>
                </div>
+               <div class="col-md-6 palette">
+                  <div class="parent">
+                    <div class="child1"></div>
+                    <div class="child1 child2">
+                      <br>
+                      <br>
+                      <p style="color: #67C25E;">Langue</p>
+                      <br>
+                      <br>
+                      <br>
+                      <p style="color: #F8325E;">Bamabara</p>
+                    </div>
 
+                  </div>
+                </div>
            </div>
+          </div>
 
-       </div>
+          
+       <div class="col-md-12 commentaire">
+        <div class="row">
+          <div class="col-md-6 cminput">
+            <div class="input-group ">
+           
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+             <span class="input-group-text" id="basic-addon1"><mat-icon>send</mat-icon></span>
+          </div>
 
+          <div class="col-md-6 cmcontent">
+            <mat-card class="card2" >
+              <mat-card-title class="text-center commentaireContent" style="color: #67C25E;">
+                <p class="textcom1">
+                  Diaraba Idrissa Diarra
+                </p>
+
+                <p class="textcom">
+                  C'est une belle ville, j'ai adoré la visite !
+                </p>
+              </mat-card-title>
+            </mat-card>
+            <br>
+            <br>
+            <mat-card class="card2" >
+              <mat-card-title class="text-center commentaireContent" style="color: #67C25E;">
+                <p class="textcom">
+                  Diaraba Idrissa Diarra
+                </p>
+
+                <p class="textcom">
+                  C'est une belle ville, j'ai adoré la visite !
+                </p>
+              </mat-card-title>
+            </mat-card>
+            <br>
+            <br>
+          </div>
+        </div>
+   </div>   
+          
     </div>
-
+    
 </div>
