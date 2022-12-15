@@ -9,11 +9,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatCardModule} from '@angular/material/card';
-import { MatGridListModule} from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { AccueilComponent } from './accueil/accueil.component';
 import { RegiondetailsComponent } from './regiondetails/regiondetails.component';
 import { PaysComponent } from './pays/pays.component';
+import { RegionsComponent } from './regions/regions.component';
+import { CompteComponent } from './compte/compte.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -24,7 +27,9 @@ import { PaysComponent } from './pays/pays.component';
     AppComponent,
     AccueilComponent,
     RegiondetailsComponent,
-    PaysComponent
+    PaysComponent,
+    RegionsComponent,
+    CompteComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +42,7 @@ import { PaysComponent } from './pays/pays.component';
     MatDividerModule,
     MatCardModule,
     MatGridListModule,
+    HttpClientModule
 
   ],
   providers: [],

@@ -1,45 +1,64 @@
 <div class="conatiner ">
-    <div class="row border mat-elevation-z8">
-        <button mat-button class="menu-button">
-            <mat-icon>add</mat-icon>
-            <span>Ajouter un pays</span>
-          </button>
+  <div class="row border mat-elevation-z8">
+    <button mat-button class="menu-button">
+      <mat-icon style="color: black;">add</mat-icon>
+      <span style="color: black;">Ajouter un pays</span>
+    </button>
     <div class="col-md-12 ">
-        <table class="table">
-          <thead>
-            <tr>
-              <th  class="gauche" scope="col">Année</th>
-              <th  scope="col">Population</th>
-              <th class="droite" scope="col">Population</th>
-            </tr>
-          </thead>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="gauche" scope="col">Nom</th>
+            <th scope="col">Superficie</th>
+            <th scope="col">Population</th>
+            <th scope="col">Langue</th>
+            <th class="droite" scope="col">Actions</th>
+          </tr>
+        </thead>
 
-          <tbody>
+        <tbody>
 
-            <tr>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
+          <tr>
+            <td>Mali</td>
+            <td>1 254 338km</td>
+            <td>1000 000</td>
+            <td>Bamabara</td>
+            <td>
+              <mat-icon class="update">update</mat-icon>
+              <mat-icon class="delete">delete</mat-icon>
+              <mat-icon class="visibility">visibility</mat-icon>
+            </td>
 
-            </tr>
+          </tr>
 
-            <tr>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>@mdo</td>
+          <tr>
+            <td>Gabon</td>
+            <td>800 000km</td>
+            <td>1000 000</td>
+            <td>Bamabara</td>
+            <td>
+              <mat-icon class="update">update</mat-icon>
+              <mat-icon class="delete">delete</mat-icon>
+              <mat-icon class="visibility">visibility</mat-icon>
+            </td>
+          </tr>
 
-            </tr>
+          <tr>
+            <td>Burkina Faso</td>
+            <td>1000 000km</td>
+            <td>4000 000</td>
+            <td>Bamabara</td>
+            <td class="actionBtngrp">
+              <mat-icon class="update">update</mat-icon>
+              <mat-icon class="delete">delete</mat-icon>
+              <mat-icon class="visibility">visibility</mat-icon>
+            </td>
 
-            <tr>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>@mdo</td>
+          </tr>
 
-            </tr>
-         
-          </tbody>
-        </table>
-       </div>
-      
+        </tbody>
+      </table>
     </div>
+
+  </div>
 </div>
