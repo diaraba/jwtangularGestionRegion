@@ -271,3 +271,11 @@ mat-card.mat-card.mat-focus-indicator.card2 {
   top: 57px;
   left: -8px;
 }
+.formsend{
+  border: none;
+  cursor: pointer;
+}
+.formsend1{
+  height: 20px;
+  border: none;
+}

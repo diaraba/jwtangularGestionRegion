@@ -11,6 +11,19 @@ mat-toolbar {
     
 
 }
+.logContent{
+    cursor: pointer;
+}
+.logIcon{
+    margin-right: 0px;
+    position: relative;
+    top: 4px;
+    color:  #FFD885;
+}
+.sideButtom{
+    position: relative;
+    top: -14px;
+}
 .dessous{
     position: relative;
     top: 30px;

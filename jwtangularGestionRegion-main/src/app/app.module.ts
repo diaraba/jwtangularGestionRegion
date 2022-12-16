@@ -17,6 +17,10 @@ import { PaysComponent } from './pays/pays.component';
 import { RegionsComponent } from './regions/regions.component';
 import { CompteComponent } from './compte/compte.component';
 import { HttpClientModule } from '@angular/common/http';
+import { httpInterceptorProviders } from './_helpers/auth.interceptor';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -30,6 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     PaysComponent,
     RegionsComponent,
     CompteComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,10 +48,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatDividerModule,
     MatCardModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
 
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

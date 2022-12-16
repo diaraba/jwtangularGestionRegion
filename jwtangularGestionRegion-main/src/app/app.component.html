@@ -39,11 +39,20 @@
 
 </mat-toolbar> -->
 <mat-toolbar class="mat-elevation-z8">
+
+
   <p class="text1">MaliTourism</p>
+  
+  <div>
+    <p style="color: black;" class="logContent" routerLink="/login">Connexion <mat-icon class="logIcon">login</mat-icon></p>
+  </div>
+  <div class="sideButtom">
   <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
     <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
     <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
   </button>
+  </div>
+
 
 </mat-toolbar>
 <mat-sidenav-container>
@@ -73,7 +82,7 @@
         <span>Compte</span>
       </button>
       <br>
-      <button mat-button class="menu-button dessous ">
+      <button mat-button class="menu-button dessous" (click)="logout()">
         <mat-icon>power_settings_new</mat-icon>
         <span>Déconnexion</span>
       </button>
