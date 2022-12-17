@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthServiceService } from '../service/authentication/auth.service.service';
+import { CompteService } from '../service/compte/compte.service';
 
 @Component({
   selector: 'app-ajoutercompte',
@@ -12,6 +13,7 @@ export class AjoutercompteComponent implements OnInit {
   form: any = {
     username: null,
     email: null,
+    role: null,
     password: null
   };
   isSuccessful = false;
@@ -19,14 +21,15 @@ export class AjoutercompteComponent implements OnInit {
   errorMessage = '';
 
 
-  constructor(private authService: AuthServiceService) { }
+  constructor(private compteService: CompteService) { }
 
   ngOnInit(): void {
   }
-  onSubmit(): void {
-    const { username, email, password } = this.form;
 
-    this.authService.register(username, email, password).subscribe({
+  onSubmit(): void {
+    const { username, email, role, password } = this.form;
+
+    this.compteService.register(username, email, role, password).subscribe({
       next: data => {
         console.log(data);
         this.isSuccessful = true;

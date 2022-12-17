@@ -51,6 +51,20 @@
               #email="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
             />
+            <div class="form-group">
+              <label for="role">Role</label>
+              <input
+                type="text"
+                class="form-control"
+                name="role"
+                [(ngModel)]="form.role"
+                required
+                minlength="3"
+                maxlength="20"
+                #role="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && role.errors }"
+              />
+            </div>
             <div class="invalid-feedback" *ngIf="email.errors && f.submitted">
               <div *ngIf="email.errors['required']">Email is required</div>
               <div *ngIf="email.errors['email']">
