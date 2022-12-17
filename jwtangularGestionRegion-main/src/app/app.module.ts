@@ -21,6 +21,9 @@ import { httpInterceptorProviders } from './_helpers/auth.interceptor';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { AjouterregionComponent } from './ajouterregion/ajouterregion.component';
+import { AjouterpaysComponent } from './ajouterpays/ajouterpays.component';
+import { AjoutercompteComponent } from './ajoutercompte/ajoutercompte.component';
 
 
 
@@ -36,6 +39,9 @@ import { RegisterComponent } from './register/register.component';
     CompteComponent,
     LoginComponent,
     RegisterComponent,
+    AjouterregionComponent,
+    AjouterpaysComponent,
+    AjoutercompteComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+.container{
+    width: 550px;
+}
+
+.profile-img-card{
+    /* margin-left: 160px;
+    margin-right: 975px; */
+    width: 100%;
+    margin-bottom: 100px;
+    background-color: #FFD885;
+}
+label{
+    font-size: 1.5rem;
+}
+.signin{
+    background-color: #67C25E;
+    border: none;
+}
+.optionLogin{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+}

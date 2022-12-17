@@ -1,10 +1,14 @@
 <div class="col-md-12">
-    <div class="card card-container">
-      <img
+  <mat-card class="container">
+    
+      <mat-card class="profile-img-card">
+        <p class="text-center">Inscription</p>
+      </mat-card>
+      <!-- <img
         id="profile-img"
         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-        class="profile-img-card"
-      />
+        
+      /> -->
       <form
         *ngIf="!isSuccessful"
         name="form"
@@ -74,16 +78,21 @@
           </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block">Sign Up</button>
+          <button class="btn btn-primary btn-block signup">Sign Up</button>
         </div>
   
         <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
           Signup failed!<br />{{ errorMessage }}
+        </div>
+        <div class="optionLogin">
+          <span>Vous avez déjà un coompte?</span>
+          <span><a  routerLink="/login">Connecter vous.</a></span>
         </div>
       </form>
   
       <div class="alert alert-success" *ngIf="isSuccessful">
         Your registration is successful!
       </div>
-    </div>
+    
+  </mat-card>
   </div>

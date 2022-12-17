@@ -26,7 +26,7 @@ mat-toolbar {
 }
 .dessous{
     position: relative;
-    top: 30px;
+    top: 165px;
     background-color: #F8325E;
     color: white;   
 }
@@ -80,12 +80,13 @@ mat-sidenav {
 
 .avatar {
     margin-top: 1px;
+    
     width: 100px;
     height: 80px;
     border-radius: 50%;
 }
 .side{
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 button{

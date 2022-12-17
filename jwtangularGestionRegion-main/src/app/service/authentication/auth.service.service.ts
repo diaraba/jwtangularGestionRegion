@@ -1,4 +1,4 @@
-import {HttpClient ,HttpHeaders } from '@angular/common/http';
+import {HttpClient ,HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -38,8 +38,10 @@ export class AuthServiceService {
   }
 
   logout():Observable<any>{
-    return this.http.post(
-      AUTH_API + 'logout',{},httpOptions
-      );
+    // return this.http.post(
+    //   AUTH_API + 'logout',{},httpOptions
+    //   );
+    const req = new HttpRequest('POST', AUTH_API + 'signout', {}, httpOptions);
+return this.http.request(req);
   }
 }

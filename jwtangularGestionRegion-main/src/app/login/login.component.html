@@ -1,10 +1,15 @@
 <div class="col-md-12">
-    <div class="card card-container">
-      <img
+    <div class="">
+      <mat-card class="container">
+
+        <mat-card class="profile-img-card">
+          <p class="text-center">Connexion</p>
+        </mat-card>
+      <!-- <img
         id="profile-img"
         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
         class="profile-img-card"
-      />
+      /> -->
       <form
         *ngIf="!isLoggedIn"
         name="form"
@@ -47,7 +52,7 @@
           </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block">
+          <button class="btn btn-primary btn-block signin">
             Login
           </button>
         </div>
@@ -56,10 +61,14 @@
             Login failed: {{ errorMessage }}
           </div>
         </div>
+        <div class="optionLogin">
+          <span>Vous n'avez pas de compte?</span>
+          <span><a  routerLink="/register">Créer un compte.</a></span>
+        </div>
       </form>
   
       <div class="alert alert-success" *ngIf="isLoggedIn">
         Logged in as {{ roles }}.
       </div>
+      </mat-card>
     </div>
-  </div>
