@@ -7,47 +7,150 @@
         
     
     
-        <form >
+        <form 
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+        >
           <div class="row">
             <div class="col-lg-6 col-xs-12">
               <label for="formGroupExampleInput">Nom</label>
-              <input type="text" class="form-control" placeholder="Nom de la region">
+              <input 
+              type="text" 
+              class="form-control" 
+              placeholder="Nom de la region"
+              name="nom"
+              required
+              [(ngModel)]="form.nom"
+              #nom="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && nom.errors }"
+              >
             </div>
             <div class=" col-lg-6 col-xs-12">
               <label for="formGroupExampleInput">Code-Region</label>
-              <input type="text" class="form-control" placeholder="Code de la region">
+              <input 
+              type="text" 
+              class="form-control"
+              placeholder="Code de la region"
+              name="codeRegions"
+              required
+              [(ngModel)]="form.codeRegions"
+              #codeRegions="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && codeRegions.errors}"
+              >
             </div>
           </div>
       
           <div class="row">
             <div class="col-lg-6  col-xs-12">
               <label for="formGroupExampleInput">Superficie</label>
-              <input type="text" class="form-control" placeholder="Superficie de la region">
+              <input 
+              type="text" 
+              class="form-control" 
+              placeholder="Superficie de la region"
+              name="superficie_regions"
+              required
+              superficie_regions
+              [(ngModel)]="form.superficie_regions"
+              #superficie_regions="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && superficie_regions.errors}"
+              >
             </div>
             <div class="col-lg-6  col-xs-12">
               <label for="formGroupExampleInput">Pays</label>
-              <input type="text" class="form-control" placeholder="Pays">
+              <input 
+              type="text" 
+              class="form-control" 
+              placeholder="Pays"
+              name="pays"
+              required
+              pays
+              [(ngModel)]="form.pays"
+              #pays="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && pays.errors}"
+              >
             </div>
           </div>
       
           <div class="row">
             <div class=" col-lg-6  col-xs-12">
               <label for="formGroupExampleInput">Activité</label>
-              <input type="text" class="form-control" placeholder="Activité de la region">
+              <input 
+              type="text" 
+              class="form-control" 
+              placeholder="Activité de la region"
+              name="domaine_activite"
+              required
+              domaine_activite
+              [(ngModel)]="form.domaine_activite"
+              #domaine_activite="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && domaine_activite.errors}"
+              >
             </div>
             <div class="col-lg-6  col-xs-12">
               <label for="formGroupExampleInput">Langue</label>
-              <input type="text" class="form-control" placeholder="Langue parlée">
+              <input 
+              type="text" 
+              class="form-control" 
+              placeholder="Langue parlée"
+              name="langue"
+              required
+              langue
+              [(ngModel)]="form.langue"
+              #langue="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && langue.errors}"
+              >
             </div>
           </div>
+          
+          <div class="row">
+            <div class=" col-lg-6  col-xs-12">
+             <label for="formGroupExampleInput">Description</label> <!-- 
+              <input type="textarea" class="form-control" placeholder="Activité de la region"> -->
+
+              <textarea  
+               rows="4" cols="36"
+               name="description"
+               required
+               description
+               [(ngModel)]="form.description"
+               #description="ngModel"
+               [ngClass]="{ 'is-invalid': f.submitted && description.errors}"
+              >
+              </textarea>
+            </div>
+          </div>
+
+
     
           <div class="ajoutimg">
-            <span> Ajouter une image</span>  <input type="file" class="form-control" placeholder="Langue parlée">
+            <span> Ajouter une image</span>  <input
+             type="file"
+             class="form-control" 
+             name="image"
+             required
+             image
+             [(ngModel)]="form.image"
+             #image="ngModel"
+             [ngClass]="{ 'is-invalid': f.submitted && image.errors}"
+             >
         </div>
-          
+           <div class="form-group">
+            <button type="submit" class="btn btn-secondary mx-auto d-block">Envoyer</button>
+          </div>
+
+           <div class="form-group">
+            <div *ngIf="f.submitted && isLoggedIn" class="alert alert-success" role="alert">
+              Region creer avec succes!
+            </div>
+            <div *ngIf="f.submitted && isLoginFailed" class="alert alert-success" role="alert">
+              La création de la region à échouer!
+            </div>
+          </div>
         </form>
     
-        <button type="submit" class="btn btn-secondary mx-auto d-block">Envoyer</button>
+       
       </div>
       
       

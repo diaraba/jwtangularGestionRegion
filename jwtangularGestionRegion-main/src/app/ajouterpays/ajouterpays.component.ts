@@ -9,6 +9,8 @@ import { PaysService } from '../service/pays.service';
 export class AjouterpaysComponent implements OnInit {
   form: any = {
   nom: null,
+  codeRegions:null,
+  
   };
 
     isLoggedIn = false;
