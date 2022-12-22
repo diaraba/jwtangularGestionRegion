@@ -20,16 +20,23 @@
           <div class="row ">
             <div class="col-md-12 col-sm-6 ">
               <div class="col-md-12 col-sm-6">
-                <mat-card class="card1">
-                  <mat-card-title class="text-center" style="color: #67C25E;">
-                    <p class="text1">500 0000</p>
+                <mat-card class="card1">   
+                  <mat-card-title class="text-center" style="color: #67C25E;" *ngFor="let pay of pays">
+                    <p class="text1">{{pay.superficie}}</p>
+                    <!-- <p>{{pay.image}}</p> -->
+                    <style>
+
+                      :host {
+                          --myCssVar: url("../../assets/image/Koulouba.jpg");
+                        }
+                      </style>
                   </mat-card-title>
                 </mat-card>
                 <p class="py-2 text-center text2" style="color: #000;">Superficie</p>
               </div>
               <div class="col-md-12 col-sm-6 mt-4  ">
                 <mat-card class="card1">
-                  <mat-card-title class="text1 text-center" style="color: #F8325E;"><span>8</span></mat-card-title>
+                  <mat-card-title class="text1 text-center" style="color: #F8325E;"><span>{{regions.length}}</span></mat-card-title>
                 </mat-card>
                 <p class="py-2 text-center text2" style="color: #000;">Régions</p>
               </div>
@@ -39,73 +46,26 @@
       </div>
     </div>
     <div class="row region1 py-4">
-      <div class="col">
+      <div class="col" *ngFor="let region of regions">
         <div class="parent">
           <div class="child1"></div>
           <div class="child1 child2 ss">
             <div class="row r_img">
-              <img class="i_reg" src="../../assets/image/Hotel_de_Ville_de_Kayes.jpg">
+              <img class="i_reg" src="../../assets/image/{{region.image}}">
             </div>
             <div class="row r_text" routerLinkActive="active">
               <div class="t_region">
-                Tombouctou <br>
+                {{region.nom}} <br>
               </div>
+              <p></p>
               <div>
               </div>
-              <mat-icon class="action" routerLink="/regiondetails">visibility</mat-icon>
+              <mat-icon class="action" [routerLink]="['/regiondetails',region.idRegion]">visibility</mat-icon>
             </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="parent">
-          <div class="child1"></div>
-          <div class="child1 child2 ss">
-            <div class="row r_img">
-              <img class="i_reg" src="../../assets/image/Capture d'écran_20221212_152228 1.png">
-            </div>
-            <div class="row r_text" routerLinkActive="active">
-              <div class="t_region">
-                <p>Tombouctou</p>
-                <br>
-              </div>
-              <mat-icon class="action" routerLink="/regiondetails">visibility</mat-icon>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="parent">
-          <div class="child1"></div>
-          <div class="child1 child2 ss">
-            <div class="row r_img">
-              <img class="i_reg" src="../../assets/image/1000.jpeg">
-            </div>
-            <div class="row r_text" routerLinkActive="active">
-              <div class="t_region">
-                Tombouctou <br>
-              </div>
-              <mat-icon class="action" routerLink="/regiondetails">visibility</mat-icon>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="parent">
-          <div class="child1"></div>
-          <div class="child1 child2 ss">
-            <div class="row r_img">
-              <img class="i_reg" src="../../assets/image/a6d0144a93132f4671f14b4a232fcbc0.jpg">
-            </div>
-            <div class="row r_text" routerLinkActive="active">
-              <div class="t_region">
-                Tombouctou <br>
-              </div>
-              <mat-icon class="action" routerLink="/regiondetails">visibility</mat-icon>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>

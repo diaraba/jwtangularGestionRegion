@@ -17,8 +17,13 @@ export class PaysComponent implements OnInit {
 
   constructor(private paysService: PaysService, private routes: ActivatedRoute) { }
 
+  pays:any;
   ngOnInit(): void {
     this.id = this.routes.snapshot.params['id'];
+    this.paysService.getAllPay().subscribe(data =>{
+      this.pays = data
+      console.log(data)
+    })
 
   } 
 

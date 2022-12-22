@@ -20,15 +20,21 @@ export class PaysService {
     
   }
 
-  ajouterPays(nom: any): Observable<any>{
+  getAllPay():Observable<any>{
+    return this.http.get(`http://localhost:8080/api/auth/pays/read`);
+  }
+
+  ajouterPays(nom: any, image:any, description:any): Observable<any>{
     
+    let data = new FormData();
+    data.append('nom', nom);
+    data.append('description', description)
+    data.append('image',image);
+    //data.append('id_pays',pays)
     return this.http.post(
-      AUTH_API + 'create',
-      {
-        nom,
-      },
-      httpOptions
-      );    
+      AUTH_API + `create/`,
+      data
+      );      
   }
 
 }

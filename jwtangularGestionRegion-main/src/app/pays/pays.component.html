@@ -15,10 +15,10 @@
                         <th class="droite" scope="col">Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody *ngFor="let pay of pays">
                     <tr>
-                        <td>Mali</td>
-                        <td>1 254 338km</td>
+                        <td>{{pay.nom}}</td>
+                        <td>{{pay.superficie}}</td>
                         <td>1000 000</td>
                         <td>Bamabara</td>
                         <td>
@@ -27,28 +27,7 @@
                             <mat-icon class="visibility">visibility</mat-icon>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Gabon</td>
-                        <td>800 000km</td>
-                        <td>1000 000</td>
-                        <td>Bamabara</td>
-                        <td>
-                            <mat-icon class="update">update</mat-icon>
-                            <mat-icon class="delete">delete</mat-icon>
-                            <mat-icon class="visibility">visibility</mat-icon>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Burkina Faso</td>
-                        <td>1000 000km</td>
-                        <td>4000 000</td>
-                        <td>Bamabara</td>
-                        <td class="actionBtngrp">
-                            <mat-icon class="update">update</mat-icon>
-                            <mat-icon class="delete">delete</mat-icon>
-                            <mat-icon class="visibility">visibility</mat-icon>
-                        </td>
-                    </tr>
+                
                 </tbody>
             </table>
         </div>

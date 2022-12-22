@@ -14,16 +14,24 @@ export class CompteService {
   constructor(private http: HttpClient) { }
 
   
-   register(username:string, email:string, role:string, password:string): Observable<any>{
+   
+
+  register(username:string, email:string, role:string, password:string): Observable<any>{
+    let mesroles: Array<string> = [];
+    mesroles.push(role);
     return this.http.post(
-      AUTH_API + 'signup',
+      AUTH_API + `signup`,
       {
         username,
         email,
-
         password,
+        role:mesroles
       },
       httpOptions
     );
+  }
+
+  getAllUser():Observable<any>{
+    return this.http.get(`http://localhost:8080/api/auth/afficherUser`);
   }
 }

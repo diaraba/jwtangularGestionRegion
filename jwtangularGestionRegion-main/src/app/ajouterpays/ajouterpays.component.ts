@@ -9,12 +9,13 @@ import { PaysService } from '../service/pays.service';
 export class AjouterpaysComponent implements OnInit {
   form: any = {
   nom: null,
-  codeRegions:null,
-  
+  description: null,
+
   };
 
     isLoggedIn = false;
    isLoginFailed = false;
+  image: any;
 
   
 
@@ -22,11 +23,17 @@ export class AjouterpaysComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  chargeImage(event: any){
+    this.image = event.target["files"][0]
+    console.log(this.image);
+  }
+
   onSubmit(): void {
-    const { nom} = this.form;
+    const { nom, description} = this.form;
     
 
-    this.ajoutPaysService.ajouterPays(nom).subscribe({
+    this.ajoutPaysService.ajouterPays(nom, this.image, description).subscribe({
       next: data => {
         console.log(data);
         if(data!=""){

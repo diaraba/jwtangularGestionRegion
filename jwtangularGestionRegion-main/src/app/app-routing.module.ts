@@ -13,7 +13,7 @@ import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
-  { path: 'regiondetails', component: RegiondetailsComponent },
+  { path: 'regiondetails/:id', component: RegiondetailsComponent },
   { path: 'pays', component: PaysComponent },
   { path: 'regions', component: RegionsComponent },
   { path: 'compte', component: CompteComponent },
@@ -22,9 +22,6 @@ const routes: Routes = [
   { path: 'ajouterregion', component: AjouterregionComponent },
   { path: 'ajouterpays', component: AjouterpaysComponent },
   { path: 'ajoutercompte', component: AjoutercompteComponent },
-
-
-
   { path: '', redirectTo: 'accueil', pathMatch: 'full' }
 ];
 

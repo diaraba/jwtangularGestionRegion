@@ -9,39 +9,20 @@
                 <thead>
                     <tr>
                         <th class="gauche" scope="col">Nom d’utilisateur</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Role</th>
                         <th class="droite" scope="col">Actions</th>
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody *ngFor="let user of users">
 
                     <tr>
-                        <td>Mali</td>
-                        <td>1 254 338km</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.email}}</td>
+
+                        <td>{{user.roles[0].name}}</td>
                         <td>
-                            <mat-icon class="update">update</mat-icon>
-                            <mat-icon class="delete">delete</mat-icon>
-                            <mat-icon class="visibility">visibility</mat-icon>
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td>Gabon</td>
-
-                        <td>Bamabara</td>
-                        <td>
-                            <mat-icon class="update">update</mat-icon>
-                            <mat-icon class="delete">delete</mat-icon>
-                            <mat-icon class="visibility">visibility</mat-icon>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Burkina Faso</td>
-                        <td>Bamabara</td>
-                        <td class="actionBtngrp">
                             <mat-icon class="update">update</mat-icon>
                             <mat-icon class="delete">delete</mat-icon>
                             <mat-icon class="visibility">visibility</mat-icon>

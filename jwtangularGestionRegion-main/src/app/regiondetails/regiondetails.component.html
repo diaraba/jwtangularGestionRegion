@@ -25,7 +25,7 @@
               <div class="col-md-12 col-sm-6">
                 <mat-card class="card1">
                   <mat-card-title class="text-center" style="color: #67C25E;">
-                    <p class="text1">500 0000</p>
+                    <p class="text1">{{regions.superficie_regions}}</p>
                   </mat-card-title>
                 </mat-card>
                 <p class="py-2 text-center text2" style="color: #000;">Superficie</p>
@@ -57,21 +57,11 @@
               </tr>
             </thead>
 
-            <tbody>
+            <tbody *ngFor="let population of populations">
 
               <tr>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-
-              <tr>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-
-              <tr>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td>{{population.annee}}</td>
+                <td>{{population.nbHabitant}}</td>
               </tr>
 
             </tbody>
@@ -87,7 +77,7 @@
               <br>
               <br>
               <br>
-              <p style="color: #F8325E;">Bamabara</p>
+              <p style="color: #F8325E;">{{regions.langue}}</p>
             </div>
 
           </div>
@@ -99,21 +89,42 @@
     <div class="col-md-12 commentaire">
       <div class="row">
         <div class="col-md-6 cminput">
-          <form>
+        <form  name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
           <div class="input-group ">
 
-            <input type="text" class="form-control" placeholder="commentaire" aria-label="commentaire"
+            <input type="text" class="form-control" placeholder="commentaire" aria-label="contenu"
+            name="contenu" required description [(ngModel)]="form.contenu"
+              #contenu="ngModel"
               aria-describedby="basic-addon1">
-            <span class="input-group-text" id="basic-addon1">
-              <button class="formsend1" type="submit"><mat-icon class="formsend">send</mat-icon></button>
-            </span>
+            <div class="input-group-text form-group" id="basic-addon1">
+                <button class="formsend1" type="submit"><mat-icon class="formsend">send</mat-icon></button>
+            </div>
           </div>
         </form>
 
-          <div class="col-md-6 cmcontent">
+          <div class="col-md-6 cmcontent" *ngFor= "let commentaire of commentaires">
             <mat-card class="card2">
               <mat-card-title class="text-center commentaireContent" style="color: #67C25E;">
-                <p class="textcom1">
+               <div>
+                <p class="textcom1 username ml-4">
+                  {{commentaire.user.username}}
+                </p>
+
+                <p class="textcom1 date">
+                  {{commentaire.date}}
+                </p>
+               </div>
+
+                <p class="textcom">
+                  {{commentaire.contenu}}
+                </p>
+              </mat-card-title>
+            </mat-card>
+            <br>
+            <br>
+            <!-- <mat-card class="card2">
+              <mat-card-title class="text-center commentaireContent" style="color: #67C25E;">
+                <p class="textcom">
                   Diaraba Idrissa Diarra
                 </p>
 
@@ -122,20 +133,7 @@
                 </p>
               </mat-card-title>
             </mat-card>
-            <br>
-            <br>
-            <mat-card class="card2">
-              <mat-card-title class="text-center commentaireContent" style="color: #67C25E;">
-                <p class="textcom">
-                  Diaraba Idrissa Diarra
-                </p>
-
-                <p class="textcom">
-                  C'est une belle ville, j'ai adoré la visite !
-                </p>
-              </mat-card-title>
-            </mat-card>
-            <br>
+            <br> -->
             <br>
           </div>
         </div>

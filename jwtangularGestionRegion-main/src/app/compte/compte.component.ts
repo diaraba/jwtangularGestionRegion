@@ -18,10 +18,15 @@ export class CompteComponent implements OnInit {
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
+  users:any;
 
   constructor(private compteService: CompteService) { }
 
   ngOnInit(): void {
+    this.compteService.getAllUser().subscribe(data =>{
+      this.users = data
+      console.log(data)
+    })
   }
 
  

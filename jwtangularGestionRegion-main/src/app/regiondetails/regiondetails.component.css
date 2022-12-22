@@ -6,276 +6,282 @@
     width: 200px;
 } */
 :host {
-    --myCssVar: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
-  }
+  --myCssVar: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
+}
 
-  /* .content {
-    padding: 16px;
+/* .content {
+  padding: 16px;
 } */
 /* .main {
-  max-width: 100%;
-  overflow-x: hidden;
+max-width: 100%;
+overflow-x: hidden;
 } */
 .content > mat-card {
-    width: 200px;
+  width: 200px;
 }
 .content .mat-card  {
-  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: block;
-  
-  position: relative;
-  padding: 16px;
-  border-radius: 4px;
-  height: 84%;
+transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+display: block;
+
+position: relative;
+padding: 16px;
+border-radius: 4px;
+height: 84%;
 }
 .regionscontent{
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  left: 0;
+display: flex;
+justify-content: space-between;
+position: relative;
+left: 0;
 }
 .menu-button{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 55px;
-  top: -30px;
-  color: #67C25E;
+display: flex;
+align-items: center;
+justify-content: center;
+left: 55px;
+top: -30px;
+color: #67C25E;
 }
 
-  .card::before {
-    
-    z-index: 1;
-    content: " ";
-    display: block;
-    position: relative;
-    left: 0;
-    top:-1px;
-    width: 100%;
-    height: 220px;
+.card::before {
+  
+  z-index: 1;
+  content: " ";
+  display: block;
+  position: relative;
+  left: 0;
+  top:-1px;
+  width: 100%;
+  height: 220px;
 
-    /* opacity: 0.2; */
-    background-image: var(--myCssVar);
-    background-repeat: no-repeat;
-    /* background-position: 50% 0; */
-    background-size: 100% 100%;
-    border-radius: 10px;
-    border: none;
-    /* filter: blur(10px); */
-    /* -webkit-filter: blur(10px); */
-  }
+  /* opacity: 0.2; */
+  background-image: var(--myCssVar);
+  background-repeat: no-repeat;
+  /* background-position: 50% 0; */
+  background-size: 100% 100%;
+  border-radius: 10px;
+  border: none;
+  /* filter: blur(10px); */
+  /* -webkit-filter: blur(10px); */
+}
 
-  .card1 {
-    
-    z-index: 1;
-    content: " ";
-    display: block;
-    position: relative;
-    left: 0;
-    top: -20px;
-    width: 100%;
-    height: 85px;
-    z-index: 0;
-    /* opacity: 0.2; */
-    /* background-repeat: no-repeat; */
-    /* background-position: 50% 0; */
-    /* background-size: 100% 100%; */
-    border-radius: 10px;
-    border: none;
-    /* filter: blur(10px); */
-    /* -webkit-filter: blur(10px); */
-  }
-  mat-card-title.mat-card-title.text {
-    position: relative;
-    top: -190px;
-    left: 25px;
+.card1 {
+  
+  z-index: 1;
+  content: " ";
+  display: block;
+  position: relative;
+  left: 0;
+  top: -20px;
+  width: 100%;
+  height: 85px;
+  z-index: 0;
+  /* opacity: 0.2; */
+  /* background-repeat: no-repeat; */
+  /* background-position: 50% 0; */
+  /* background-size: 100% 100%; */
+  border-radius: 10px;
+  border: none;
+  /* filter: blur(10px); */
+  /* -webkit-filter: blur(10px); */
+}
+mat-card-title.mat-card-title.text {
+  position: relative;
+  top: -190px;
+  left: 25px;
 
 }
 
-  .carte{
-    height: 270px;
-    margin-top: 0px;
-   
-  }
-  .large{
-     width:500px;
-     height:270px;
+.carte{
+  height: 270px;
+  margin-top: 0px;
+ 
+}
+.large{
+   width:500px;
+   height:270px;
+}
+
+.text{
+  z-index: 3;
+}
+
+.text1{
+  font-size: bold;
+  font-size: 2rem;
+  position: relative;
+  top: 25%;
   }
 
-  .text{
-    z-index: 3;
+  .text2{
+    font-size: 1.25rem;
   }
-
-  .text1{
-    font-size: bold;
-    font-size: 2rem;
+  .regionnav{
+    height: 200px;  
+    border-radius: 10px;
     position: relative;
-    top: 25%;
-    }
+    left: 0px;
+    top: -10px;
+    padding-top: 90px;
+  }
 
-    .text2{
-      font-size: 1.25rem;
-    }
-    .regionnav{
-      height: 200px;  
-      border-radius: 10px;
-      position: relative;
-      left: 0px;
-      top: -10px;
-      padding-top: 90px;
-    }
+  .paysCarte{
+    position: relative;
+    left: 0;
+    display: flex;
+    margin-top: 60px;
+    top: 210px;
+    justify-content: space-between;
+  }
+  .populationCarte{
+    position: relative;
+    left: 20px;
+  }
+.card1 p .text1{
+  color: #67C25E !important
+}
 
-    .paysCarte{
-      position: relative;
-      left: 0;
-      display: flex;
-      margin-top: 60px;
-      top: 210px;
-      justify-content: space-between;
-    }
-    .populationCarte{
-      position: relative;
-      left: 20px;
-    }
   .card1 p .text1{
-    color: #67C25E !important
-  }
-
-    .card1 p .text1{
-    color: #67C25E !important
-  }
+  color: #67C25E !important
+}
 
 
-  .col-md-4.ms-1 {
-    margin-left: 300px;
+.col-md-4.ms-1 {
+  margin-left: 300px;
 }
 
 @media screen and (max-width: 990px) {
-    .card1[_ngcontent-dyt-c43] {
-        z-index: 1;
-        content: " ";
-        display: block;
-        position: relative;
-        left: 0;
-        top: 27px;
-        width: 501px;
-        height: 70px;
-        z-index: 0;
-        border-radius: 10px;
-        border: none;
-        left: -313px;
-    }
+  .card1[_ngcontent-dyt-c43] {
+      z-index: 1;
+      content: " ";
+      display: block;
+      position: relative;
+      left: 0;
+      top: 27px;
+      width: 501px;
+      height: 70px;
+      z-index: 0;
+      border-radius: 10px;
+      border: none;
+      left: -313px;
   }
+}
 
-  .gauche{
-      border-top-left-radius: 10px;
-        }
+.gauche{
+    border-top-left-radius: 10px;
+      }
 
-        .droite{
-            border-top-right-radius: 10px;
-              }
-  th{
-    background-color: #DDF8D7;
-    border: none;
-    font-size: 1.5rem!important;
-  }
-  tr td{
-    border-bottom: black;
-    font-size: 1rem!important;
-  }
+      .droite{
+          border-top-right-radius: 10px;
+            }
+th{
+  background-color: #DDF8D7;
+  border: none;
+  font-size: 1.5rem!important;
+}
+tr td{
+  border-bottom: black;
+  font-size: 1rem!important;
+}
 
- 
-  .parent {
-    position: relative;
-    width: 290px;
-    height: 240px;
-    margin: 10px;top: -15px;
+
+.parent {
+  position: relative;
+  width: 290px;
+  height: 240px;
+  margin: 10px;top: -15px;
 }
 .child1 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    /* opacity: 0.7; */
-    background: #FFD885;
-    border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* opacity: 0.7; */
+  background: #FFD885;
+  border-radius: 10px;
 }
 .child2 {
-    z-index: 1;
-    margin: 30px;
-    width: 270px;
-    height: 220px;
-    margin-top: -1px;
-    margin-left: 20px;
-    border-radius: 0;
-    background: #F8FFF8;
+  z-index: 1;
+  margin: 30px;
+  width: 270px;
+  height: 220px;
+  margin-top: -1px;
+  margin-left: 20px;
+  border-radius: 0;
+  background: #F8FFF8;
 }
 
 .child2 p{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .palette{
-  position: relative;
-  left: 63%;  
+position: relative;
+left: 63%;  
 }
 
 .palette1{
-  display: flex;
-  justify-content: space-evenly;
+display: flex;
+justify-content: space-evenly;
 }
 span.action {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 45px;
-  position: relative;
-  left: -108px;
+display: flex;
+justify-content: flex-start;
+margin-left: 45px;
+position: relative;
+left: -108px;
 }
 .commentaire{
-  position: relative;
-  top: 300px;
+position: relative;
+top: 300px;
 }
 .commentaireContent{
-  display: flex;
-  justify-content: space-between;
-  margin-top: -10px;
+display: flex;
+justify-content: space-between;
+margin-top: -10px;
 }
 mat-card.mat-card.mat-focus-indicator.card2 {
-  width: 1000px;
-  height: 90px;
+width: 1000px;
+height: 90px;
 }
 .textcom{
-  width: fit-content;
-  font-size: 1rem;
-  color: black;
+width: fit-content;
+font-size: 1rem;
+color: black;
 }
 .textcom1{
-  font-size: 1.5rem;
-  color: black;
+font-size: 1.15rem;
+color: black;
 }
-.cminput{
+.textcom1.username{
+  font-size: 1.15rem;
+  color: black;
   position: relative;
-  left: 100 px;
-  top: -100px;
+  right:100px;
+  }
+.cminput{
+position: relative;
+left: 100 px;
+top: -100px;
 }
 .input-group {
-  position: relative;
-  left: 8px;
-  top: 40px;
+position: relative;
+left: 8px;
+top: 40px;
 }
 .col-md-6.cmcontent {
-  position: relative;
-  top: 57px;
-  left: -8px;
+position: relative;
+top: 57px;
+left: -8px;
 }
 .formsend{
-  border: none;
-  cursor: pointer;
+border: none;
+cursor: pointer;
 }
 .formsend1{
-  height: 20px;
-  border: none;
+height: 20px;
+border: none;
 }
